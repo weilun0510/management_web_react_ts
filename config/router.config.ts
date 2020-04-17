@@ -7,8 +7,15 @@ const routes: IRoute[] = [
   },
   {
     path: '/login',
+    component: './Login',
+  },
+  {
+    path: '/dashboard',
     component: '../layouts',
-    routes: [{ path: '/login', component: './Login' }],
+    routes: [
+      { path: '/dashboard', redirect: '/dashboard/home' },
+      { path: '/dashboard/home', component: './Dashboard/Home' },
+    ],
   },
 ];
 

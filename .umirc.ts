@@ -20,7 +20,7 @@ const config: IConfig = {
         antd: true,
         dva: true,
         dynamicImport: { webpackChunkName: true },
-        title: 'ldpiot_server_web',
+        title: '智能电源控制项目',
         dll: false,
 
         routes: {

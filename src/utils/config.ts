@@ -15,8 +15,8 @@ export interface RouteList {
 }
 
 export default {
-  siteName: 'LD Umi',
-  copyright: 'LD Umi  © 2020',
+  siteName: '智能电源控制项目',
+  copyright: '智能电源控制项目  © 2020',
   logoPath: '/logo.svg',
   defaultTheme: 'light',
   // eslint-disable-next-line no-undef

@@ -1,24 +1,14 @@
-@import '~@/themes/vars.less';
-
-.normal {
-  font-family: Georgia, sans-serif;
-  margin-top: 4em;
+.loginStyle {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.welcome {
-  height: 328px;
-  background: url('@/assets/yay.jpg') no-repeat center 0;
-  background-size: 388px 328px;
-}
-
-.list {
-  font-size: 1.2em;
-  margin-top: 1.8em;
-  list-style: none;
-  line-height: 1.5em;
-}
-
-.list code {
-  background: @primary-color;
+  :global {
+    .ant-btn-primary {
+      width: 100%;
+    }
+  }
 }
