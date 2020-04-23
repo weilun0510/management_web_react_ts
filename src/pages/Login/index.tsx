@@ -7,9 +7,10 @@ import { GlobalState, UmiComponentProps } from '@/types/globals';
 
 interface LoginProps extends FormComponentProps, UmiComponentProps {}
 
-const mapStateToProps = ({ login }: GlobalState) => {
+const mapStateToProps = ({ login, app }: GlobalState) => {
   return {
     login,
+    app,
   };
 };
 
@@ -65,7 +66,12 @@ class Login extends PureComponent<LoginProps> {
       if (errors) {
         return;
       }
-      dispatch({ type: 'login/login', payload: values });
+      dispatch({ type: 'login/login', payload: values }).then(res => {
+        console.log('res: ', res);
+        if (res.statusCode === 200) {
+          dispatch({ type: 'app/query' });
+        }
+      });
     });
   };
 }

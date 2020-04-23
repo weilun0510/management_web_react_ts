@@ -27,7 +27,10 @@ const mapStateToProps = ({ loading }: GlobalState) => ({
 type StateProps = ReturnType<typeof mapStateToProps>;
 interface BaseLayoutProps extends StateProps, UmiComponentProps, RouteComponentProps {}
 
-@connect(mapStateToProps, null)
+@connect(
+  mapStateToProps,
+  null,
+)
 class BaseLayout extends PureComponent<BaseLayoutProps> {
   previousPath: string;
 

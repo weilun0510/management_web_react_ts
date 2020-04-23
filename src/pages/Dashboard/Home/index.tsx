@@ -17,7 +17,7 @@ class Home extends PureComponent<HomeProps> {
   componentDidMount() {}
 
   render() {
-    return <div>home</div>;
+    return <div>home1</div>;
   }
 }
 

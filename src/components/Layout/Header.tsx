@@ -6,7 +6,7 @@ import Img from 'react-image';
 // import { GlobalState } from '@/types/globals';
 import { router } from '@/utils';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = ({ app }) => ({ app });
 
 // type HearderStateProps = ReturnType<typeof mapStateToProps>;
 // type HeaderProps = HearderStateProps & UmiComponentProps;
@@ -50,7 +50,7 @@ class Header extends PureComponent<any, State> {
       <Layout.Header className={styles.header}>
         <div className={styles.logo}>
           <Img src={require('@/assets/images/logo.png')} />
-          <p>11</p>
+          <p>智能电源控制后台</p>
         </div>
         <div className={styles.right}>
           <Img src={require('@/assets/images/logo.png')} />
@@ -85,13 +85,13 @@ class Header extends PureComponent<any, State> {
   };
 
   openHelp = () => {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'helpGlobal/getHelpData',
-    });
-    this.setState({
-      helpVisible: true,
-    });
+    // const { dispatch } = this.props;
+    // dispatch({
+    //   type: 'helpGlobal/getHelpData',
+    // });
+    // this.setState({
+    //   helpVisible: true,
+    // });
   };
   cancelHelp = () => {
     this.setState({

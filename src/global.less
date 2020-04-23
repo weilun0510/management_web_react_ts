@@ -3,7 +3,87 @@ body,
 #root {
   height: 100%;
 }
-
 body {
   margin: 0;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.flexAuto {
+  flex: auto;
+  overflow: auto;
+}
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+.flexNoWrap {
+  flex-wrap: nowrap;
+}
+.itemCenter {
+  align-items: center;
+}
+.itemBaseline {
+  align-items: baseline;
+}
+.flex-direction {
+  flex-direction: column;
+}
+
+.flexColEnd {
+  display: flex;
+  justify-content: flex-end;
+  .flex-direction;
+}
+.flexColBetween {
+  display: flex;
+  justify-content: space-between;
+  .flex-direction;
+}
+.flexColCenter {
+  display: flex;
+  justify-content: center;
+  .flex-direction;
+}
+.flexColStart {
+  display: flex;
+  justify-content: flex-start;
+  .flex-direction;
+}
+.flexColAround {
+  display: flex;
+  justify-content: space-around;
+  .flex-direction;
+}
+
+.listTitle {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  background: rgba(240, 243, 250, 1);
+  border-bottom: 1px solid #fff;
+  color: rgba(51, 51, 51, 1);
+  padding: 0 20px;
 }

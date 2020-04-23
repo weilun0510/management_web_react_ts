@@ -1,0 +1,26 @@
+@import '~@/themes/vars.less';
+
+.searchForm {
+  margin-bottom: @ld-spacing-m;
+  padding: @ld-spacing-s;
+  background: @component-background;
+}
+.suffixIcon {
+  height: 16px;
+  width: 16px;
+  color: @text-color-inverse;
+}
+.btn {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 12px;
+  :global {
+    .ant-btn {
+      margin-left: 12px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -23,6 +23,7 @@ const LoginModel: DvaModel<LoginState> = {
       } else {
         message.error(res.message);
       }
+      return res;
     },
   },
 

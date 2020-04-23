@@ -69,6 +69,43 @@ const routes = [
         _title_default: '智能电源控制项目',
       },
       {
+        path: '/dashboard/systemMgmt',
+        routes: [
+          {
+            path: '/dashboard/systemMgmt/user',
+            component: __IS_BROWSER
+              ? _dvaDynamic({
+                  app: require('@tmp/dva').getApp(),
+                  models: () => [
+                    import(/* webpackChunkName: 'p__Dashboard__SystemMgmt__User__model.ts' */ '/home/chenweilun/Documents/project/ldpiot_server_web/src/pages/Dashboard/SystemMgmt/User/model.ts').then(
+                      m => {
+                        return { namespace: 'model', ...m.default };
+                      },
+                    ),
+                  ],
+                  component: () =>
+                    import(/* webpackChunkName: "layouts" */ '../Dashboard/SystemMgmt/User'),
+                })
+              : require('../Dashboard/SystemMgmt/User').default,
+            exact: true,
+            _title: '智能电源控制项目',
+            _title_default: '智能电源控制项目',
+          },
+          {
+            component: () =>
+              React.createElement(
+                require('/home/chenweilun/Documents/project/ldpiot_server_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                  .default,
+                { pagesPath: 'src/pages', hasRoutesInConfig: true },
+              ),
+            _title: '智能电源控制项目',
+            _title_default: '智能电源控制项目',
+          },
+        ],
+        _title: '智能电源控制项目',
+        _title_default: '智能电源控制项目',
+      },
+      {
         component: () =>
           React.createElement(
             require('/home/chenweilun/Documents/project/ldpiot_server_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')

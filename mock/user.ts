@@ -2,7 +2,16 @@ import { Request, Response } from 'express';
 import { Mock, randomAvatar, ResponseWarpper } from './_utils';
 import api from '../src/services/api';
 
-const { login, logout, queryRouteList, queryUserInfo } = api;
+const {
+  login,
+  logout,
+  queryRouteList,
+  queryUserInfo,
+  getUser,
+  addUser,
+  updateUser,
+  deleteUser,
+} = api;
 
 const usersListData = Mock.mock({
   'data|80-100': [
@@ -124,24 +133,23 @@ export default {
       },
       {
         id: 2,
-        name: '基础信息',
+        name: '系统管理',
         route: '',
         children: [
           {
-            id: 9,
-            name: '停车场',
-            route: '/dashboard/parkingMgmt',
-            children: [
-              {
-                id: 10,
-                name: '停车场管理',
-                route: '/dashboard/parkingMgmt/parking',
-                children: [],
-                parentId: 9,
-                icon: '',
-                level: 3,
-              },
-            ],
+            id: 21,
+            name: '用户管理',
+            route: '/dashboard/systemMgmt/user',
+            children: [],
+            parentId: 2,
+            icon: '',
+            level: 2,
+          },
+          {
+            id: 22,
+            name: '角色管理',
+            route: '/dashboard/systemMgmt/role',
+            children: [],
             parentId: 2,
             icon: '',
             level: 2,
@@ -152,6 +160,112 @@ export default {
         level: 1,
       },
     ];
+    if (data) {
+      res.json(ResponseWarpper.success(data));
+    } else {
+      res.json(ResponseWarpper.failed('Not Found'));
+    }
+  },
+
+  [getUser](req: Request, res: Response) {
+    console.log('req: ', req.query);
+
+    const data = {
+      content: [
+        {
+          id: 1,
+          userName: 'string1',
+          name: 'string1',
+          email: 'string',
+          phone: 'string',
+          roleId: 0,
+          roleName: 'string',
+          menuList: [
+            {
+              id: 0,
+              name: 'string',
+              route: 'string',
+              parentId: 0,
+              icon: 'string',
+              level: 0,
+              children: [
+                {
+                  id: 0,
+                  name: 'string',
+                  route: 'string',
+                  parentId: 0,
+                  icon: 'string',
+                  level: 0,
+                  children: [
+                    {
+                      id: 0,
+                      name: 'string',
+                      route: 'string',
+                      parentId: 0,
+                      icon: 'string',
+                      level: 0,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      pageable: {
+        sort: {
+          sorted: true,
+          unsorted: false,
+          empty: false,
+        },
+        offset: 0,
+        pageNumber: 0,
+        pageSize: 10,
+        paged: true,
+        unpaged: false,
+      },
+      last: true,
+      totalPages: 1,
+      totalElements: 11,
+      size: 10,
+      number: 0,
+      sort: {
+        sorted: true,
+        unsorted: false,
+        empty: false,
+      },
+      numberOfElements: 11,
+      first: true,
+      empty: false,
+    };
+    if (data) {
+      res.json(ResponseWarpper.success(data));
+    } else {
+      res.json(ResponseWarpper.failed('Not Found'));
+    }
+  },
+
+  [addUser](req: Request, res: Response) {
+    console.log('req: ', req.body);
+    const data = 1;
+    if (data) {
+      res.json(ResponseWarpper.success(data));
+    } else {
+      res.json(ResponseWarpper.failed('Not Found'));
+    }
+  },
+  [updateUser](req: Request, res: Response) {
+    console.log('req: ', req.body);
+    const data = 1;
+    if (data) {
+      res.json(ResponseWarpper.success(data));
+    } else {
+      res.json(ResponseWarpper.failed('Not Found'));
+    }
+  },
+  [deleteUser](req: Request, res: Response) {
+    console.log('body: ', req.body);
+    const data = 1;
     if (data) {
       res.json(ResponseWarpper.success(data));
     } else {

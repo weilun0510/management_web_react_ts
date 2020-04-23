@@ -15,6 +15,16 @@ const routes: IRoute[] = [
     routes: [
       { path: '/dashboard', redirect: '/dashboard/home' },
       { path: '/dashboard/home', component: './Dashboard/Home' },
+      // 系统管理
+      {
+        path: '/dashboard/systemMgmt',
+        routes: [
+          {
+            path: '/dashboard/systemMgmt/user',
+            component: './Dashboard/SystemMgmt/User',
+          },
+        ],
+      },
     ],
   },
 ];
