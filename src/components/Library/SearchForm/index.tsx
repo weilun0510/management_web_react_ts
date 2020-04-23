@@ -11,15 +11,29 @@ import ExpandBtn from '../ExpandBtn';
 import styles from './index.less';
 import { chunk } from 'lodash';
 import classNames from 'classnames';
-import { IButtonProps } from '../type';
+// import { IButtonProps } from '../type';
 
 const FormItem = Form.Item;
 const DEFAULT_COLUMN_NUM_OF_ROW = 4;
 
+interface IButtonProps {
+  customtype?: string;
+  icon?: string;
+  title: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}
+
 interface ISearchFormItemsProps {
   type: string;
   field: string;
-  placeholder: string;
+  disabled?: boolean;
+  placeholder?: string | undefined;
+  onClick?: Function;
+  // children?: Children[];
+  initialValue?: any;
+  // suffix?: ReactElement | string;
+  maxLength?: number;
+  // onChange?: onSelectChange | onDatePickerChange | onRangePickerChange;
 }
 
 interface SearchFormProps extends FormComponentProps, UmiComponentProps {

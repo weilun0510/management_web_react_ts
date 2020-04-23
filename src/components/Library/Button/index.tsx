@@ -6,24 +6,19 @@ import classnames from 'classnames';
 
 export type IButtonProps = {
   customtype?: string;
-  title?: string;
   className?: string;
 } & AntButtonProps;
 
 class Button extends PureComponent<IButtonProps> {
   render() {
-    const { title, customtype, className } = this.props;
+    const { customtype, className } = this.props;
 
     let cn = className;
     if (customtype) {
       cn = className ? classnames(styles[customtype], className) : styles[customtype];
     }
 
-    return (
-      <AntdButton {...this.props} className={cn} onClick={this.onClick}>
-        {title}
-      </AntdButton>
-    );
+    return <AntdButton {...this.props} className={cn} onClick={this.onClick} />;
   }
 
   onClick = e => {

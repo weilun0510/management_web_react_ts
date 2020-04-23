@@ -1,4 +1,5 @@
 import { FormComponentProps, WrappedFormUtils, FormProps } from './Form';
+import { PaginationConfig, TableProps, ColumnProps } from './Table';
 import { InputProps } from './Input';
 // import { SelectProps } from './Select';
 // import { DatePickerProps, RangePickerProps, RangePickerValue } from './DatePicker';
@@ -29,9 +30,9 @@ export {
   // StepsProps,
   // CollapseProps,
   // DropdownProps,
-  // PaginationConfig,
-  // TableProps,
-  // ColumnProps,
+  PaginationConfig,
+  TableProps,
+  ColumnProps,
   FormComponentProps,
   // FormSimpleProps,
   // ModalProps,

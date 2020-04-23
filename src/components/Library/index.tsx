@@ -8,6 +8,10 @@ import Form from './Form';
 import ExpandBtn from './ExpandBtn';
 import ButtonGroup from './ButtonGroup';
 import CommonComponent from './CommonComponent';
+import Spin from './Spin';
+import Tooltip from './Tooltip';
+import Dropdown from './Dropdown';
+import Table from './Table';
 
 export {
   Layout,
@@ -20,4 +24,8 @@ export {
   ExpandBtn,
   ButtonGroup,
   CommonComponent,
+  Spin,
+  Tooltip,
+  Dropdown,
+  Table,
 };

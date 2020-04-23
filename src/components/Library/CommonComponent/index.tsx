@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spin, Tooltip, Dropdown, Menu, Icon } from '@/components/Library';
 import styles from './index.less';
-import { ButtonProps } from '../type';
+import { IButtonProps } from '../type';
 import Button from '../Button';
 
 const defaultOptions: CommonComponentProps = {
@@ -54,7 +54,7 @@ class CommonComponent {
     );
   }
 
-  static renderMoreOperate(btnList: ButtonProps[], showNum: number = 2) {
+  static renderMoreOperate(btnList: IButtonProps[], showNum: number = 2) {
     const first =
       showNum + 1 === btnList.length ? btnList : btnList.filter((v, i) => i <= showNum - 1);
     const back = showNum + 1 === btnList.length ? [] : btnList.filter((v, i) => i > showNum - 1);
