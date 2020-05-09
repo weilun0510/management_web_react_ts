@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import findRoute, {
   getUrlQuery,
-} from '/home/chenweilun/Documents/project/ldpiot_server_web/node_modules/umi-build-dev/lib/findRoute.js';
+} from '/home/chenweilun/Documents/project/management_web_temp/node_modules/umi-build-dev/lib/findRoute.js';
 
 // runtime plugins
 const plugins = require('umi/_runtimePlugin');
@@ -221,8 +221,8 @@ export default (__IS_BROWSER ? null : serverRender);
 
     // Umi UI Bubble
     require('../../../node_modules/umi-plugin-ui/lib/bubble').default({
-      port: 3000,
-      path: '/home/chenweilun/Documents/project/ldpiot_server_web',
+      port: 3001,
+      path: '/home/chenweilun/Documents/project/management_web_temp',
       currentProject: '',
       isBigfish: undefined,
     });

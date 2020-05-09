@@ -26,7 +26,7 @@ const routes = [
       ? _dvaDynamic({
           app: require('@tmp/dva').getApp(),
           models: () => [
-            import(/* webpackChunkName: 'p__Login__model.ts' */ '/home/chenweilun/Documents/project/ldpiot_server_web/src/pages/Login/model.ts').then(
+            import(/* webpackChunkName: 'p__Login__model.ts' */ '/home/chenweilun/Documents/project/management_web_temp/src/pages/Login/model.ts').then(
               m => {
                 return { namespace: 'model', ...m.default };
               },
@@ -77,7 +77,7 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import(/* webpackChunkName: 'p__Dashboard__SystemMgmt__User__model.ts' */ '/home/chenweilun/Documents/project/ldpiot_server_web/src/pages/Dashboard/SystemMgmt/User/model.ts').then(
+                    import(/* webpackChunkName: 'p__Dashboard__SystemMgmt__User__model.ts' */ '/home/chenweilun/Documents/project/management_web_temp/src/pages/Dashboard/SystemMgmt/User/model.ts').then(
                       m => {
                         return { namespace: 'model', ...m.default };
                       },
@@ -94,7 +94,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/home/chenweilun/Documents/project/ldpiot_server_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('/home/chenweilun/Documents/project/management_web_temp/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -108,7 +108,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/home/chenweilun/Documents/project/ldpiot_server_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('/home/chenweilun/Documents/project/management_web_temp/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -122,7 +122,7 @@ const routes = [
   {
     component: () =>
       React.createElement(
-        require('/home/chenweilun/Documents/project/ldpiot_server_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+        require('/home/chenweilun/Documents/project/management_web_temp/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
         { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),

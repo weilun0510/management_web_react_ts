@@ -20,7 +20,7 @@ export function _onCreate() {
     app.use(plugin);
   });
   
-  app.model({ namespace: 'app', ...(require('/home/chenweilun/Documents/project/ldpiot_server_web/src/models/app.ts').default) });
+  app.model({ namespace: 'app', ...(require('/home/chenweilun/Documents/project/management_web_temp/src/models/app.ts').default) });
   return app;
 }
 

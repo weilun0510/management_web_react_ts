@@ -15,10 +15,7 @@ interface State {
   helpVisible: boolean;
 }
 
-@connect(
-  mapStateToProps,
-  null,
-)
+@connect(mapStateToProps, null)
 class Header extends PureComponent<any, State> {
   constructor(props) {
     super(props);
@@ -50,7 +47,7 @@ class Header extends PureComponent<any, State> {
       <Layout.Header className={styles.header}>
         <div className={styles.logo}>
           <Img src={require('@/assets/images/logo.png')} />
-          <p>智能电源控制后台</p>
+          <p>管理后台</p>
         </div>
         <div className={styles.right}>
           <Img src={require('@/assets/images/logo.png')} />
