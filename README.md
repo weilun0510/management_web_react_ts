@@ -1,6 +1,9 @@
-# LD UMI
+# UMI
 
 基于 [umijs](https://umijs.org/zh/guide/) 搭建的前端框架
+
+## 版本信息
+umi2.x react16.7 antd3.x ts
 
 ## 维护开发
 
